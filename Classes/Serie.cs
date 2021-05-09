@@ -30,6 +30,8 @@ namespace APP_Series.Classes
       retorno += "Título: " + this.Titulo + Environment.NewLine;
       retorno += "Descrição: " + this.Descricao + Environment.NewLine;
       retorno += "Ano de início: " + this.Ano + Environment.NewLine;
+      retorno += "Está Excluido: " + this.Excluido + Environment.NewLine;
+
 
       return retorno;
 
@@ -41,6 +43,10 @@ namespace APP_Series.Classes
     public int retornaId()
     {
       return this.id;
+    }
+    public bool retornaExcluido()
+    {
+      return this.Excluido;
     }
     public void Excluir()
     {

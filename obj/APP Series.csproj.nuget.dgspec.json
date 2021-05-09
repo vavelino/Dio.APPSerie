@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\C_Sharp_digital\\APP Series\\APP Series.csproj": {}
+    "D:\\C_Sharp_digital\\APP Series\\APP Series.csproj": {}
   },
   "projects": {
-    "d:\\C_Sharp_digital\\APP Series\\APP Series.csproj": {
+    "D:\\C_Sharp_digital\\APP Series\\APP Series.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\C_Sharp_digital\\APP Series\\APP Series.csproj",
+        "projectUniqueName": "D:\\C_Sharp_digital\\APP Series\\APP Series.csproj",
         "projectName": "APP Series",
-        "projectPath": "d:\\C_Sharp_digital\\APP Series\\APP Series.csproj",
+        "projectPath": "D:\\C_Sharp_digital\\APP Series\\APP Series.csproj",
         "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
-        "outputPath": "d:\\C_Sharp_digital\\APP Series\\obj\\",
+        "outputPath": "D:\\C_Sharp_digital\\APP Series\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",

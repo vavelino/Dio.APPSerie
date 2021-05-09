@@ -57,7 +57,7 @@ namespace APP_Series
       Console.WriteLine("1 - Listar Séries");
       Console.WriteLine("2 - Inserir nova Série");
       Console.WriteLine("3 - Atualizar Série");
-      Console.WriteLine("4 - ExcluirSérie");
+      Console.WriteLine("4 - Excluir Série");
       Console.WriteLine("5 - Visualizar Série");
       Console.WriteLine("C - Limpar Tela");
       Console.WriteLine("X - Sair");
@@ -70,17 +70,58 @@ namespace APP_Series
 
     private static void VisualizarSerie()
     {
-      throw new NotImplementedException();
+      int idSerie;
+
+      Console.Write("Digite o Id de Séries: ");
+      idSerie = int.Parse(Console.ReadLine());
+      Serie serie = repositorio.RetornaPorId(idSerie);
+
+      Console.WriteLine(serie);
     }
 
     private static void ExcluirSerie()
     {
-      throw new NotImplementedException();
+      int idSerie;
+
+      Console.Write("Digite o Id de Séries: ");
+      idSerie = int.Parse(Console.ReadLine());
+      repositorio.Excluir(idSerie);
     }
 
     private static void AtualizarSerie()
     {
-      throw new NotImplementedException();
+      int idSerie;
+      int entradaGenero;
+      string entradaTitulo;
+      int entradaAno;
+      string entradaDescricao;
+      Serie atualizaSerie; ;
+
+      Console.Write("Digite o Id de Séries: ");
+      idSerie = int.Parse(Console.ReadLine());
+
+      foreach (int i in Enum.GetValues(typeof(Genero)))
+      {
+        Console.WriteLine("{0} - {1}", i, Enum.GetName(typeof(Genero), i));
+      }
+      Console.Write("Digite o Genêro Entre as Opções Acima: ");
+      entradaGenero = int.Parse(Console.ReadLine());
+
+      Console.Write("Digite o Título da Série: ");
+      entradaTitulo = Console.ReadLine();
+
+      Console.Write("Digite o Ano da Série: ");
+      entradaAno = int.Parse(Console.ReadLine());
+
+      Console.Write("Digite a Descrição da Série: ");
+      entradaDescricao = Console.ReadLine();
+      atualizaSerie = new Serie(id: idSerie,
+                            genero: (Genero)entradaGenero,
+                            titulo: entradaTitulo,
+                            ano: entradaAno,
+                            descricao: entradaDescricao);
+      repositorio.Atualizar(idSerie, atualizaSerie);
+
     }
 
     private static void InserirSerie()
@@ -127,8 +168,9 @@ namespace APP_Series
       }
       foreach (Serie serie in lista)
       {
-        Console.WriteLine("#ID {0} - {1}", serie.retornaId(),
-        serie.retornaTitulo());
+        Console.WriteLine("#ID {0} - {1} - {2}", serie.retornaId(),
+        serie.retornaTitulo(),
+        (serie.retornaExcluido() ? ("Série Excluida") : ("Serie Disponível")));
       }
     }
   }

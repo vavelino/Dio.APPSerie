@@ -7,6 +7,8 @@ namespace APP_Series
   {
     static void Main(string[] args)
     {
+      Serie minhaclasse = new Serie();
+
       Console.WriteLine("Hello World!");
     }
   }

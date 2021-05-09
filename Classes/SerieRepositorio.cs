@@ -8,32 +8,33 @@ namespace APP_Series.Classes
     private List<Serie> listaSerie = new List<Serie>();
     public void Atualizar(int id, Serie entidade)
     {
-      throw new System.NotImplementedException();
+      listaSerie[id] = entidade;
     }
 
     public void Excluir(int id)
     {
-      throw new System.NotImplementedException();
+      listaSerie[id].Excluir();
+      //listaSerie.RemoveAt(id); // Remove reclassificando a lista
     }
 
     public void Insere(Serie entidade)
     {
-      throw new System.NotImplementedException();
+      listaSerie.Add(entidade);
     }
 
     public List<Serie> Lista()
     {
-      throw new System.NotImplementedException();
+      return listaSerie;
     }
 
     public int ProximaId()
     {
-      throw new System.NotImplementedException();
+      return listaSerie.Count;
     }
 
     public Serie RetornaPorId(int id)
     {
-      throw new System.NotImplementedException();
+      return listaSerie[id];
     }
   }
 }

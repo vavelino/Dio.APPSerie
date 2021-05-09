@@ -1,5 +1,5 @@
 using System;
-using APP_Series.Enum;
+using APP_Series.Enumerados;
 
 namespace APP_Series.Classes
 {
@@ -10,6 +10,8 @@ namespace APP_Series.Classes
     private string Descricao { get; set; }
     private int Ano { get; set; }
 
+    private bool Excluido { get; set; }
+
     public Serie(int id, Genero genero, string titulo, string descricao, int ano)
     {
       this.id = id;
@@ -17,6 +19,7 @@ namespace APP_Series.Classes
       this.Titulo = titulo;
       this.Descricao = descricao;
       this.Ano = ano;
+      Excluido = false;
     }
     public override string ToString()
     {
@@ -38,6 +41,10 @@ namespace APP_Series.Classes
     public int retornaId()
     {
       return this.id;
+    }
+    public void Excluir()
+    {
+      this.Excluido = true;
     }
   }
 

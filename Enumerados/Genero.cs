@@ -1,4 +1,4 @@
-namespace APP_Series.Enum
+namespace APP_Series.Enumerados
 {
   public enum Genero
   {
